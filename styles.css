@@ -3,14 +3,19 @@ body {
   font-family: "Open Sans", sans-serif;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  /* width: 100%; */
   align-items: center;
+}
+
+main {
+  width: 1088px;
 }
 
 .container {
   width: 1088px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .hero {
@@ -40,7 +45,7 @@ body {
   margin-top: -50px;
   margin-left: 90px;
   text-align: left;
-  font: normal normal normal 22px/70px 'Open Sans';
+  font: normal normal normal 22px/70px "Open Sans";
   letter-spacing: 0px;
   color: #f8f8f8;
   text-transform: lowercase;
@@ -49,7 +54,7 @@ body {
 
 .hero h1 {
   text-align: left;
-  font: normal normal bold 35px/60px 'Open Sans';
+  font: normal normal bold 35px/60px "Open Sans";
   letter-spacing: 0px;
   color: #1cc6a0;
   text-transform: uppercase;
@@ -64,9 +69,9 @@ body {
   text-transform: lowercase;
 }
 
-.hero hr {
+hr {
   height: 0px;
-  border: 2px solid #1cc6a0;
+  border: 1px solid #1cc6a0;
   opacity: 1;
 }
 .hero h2 {
@@ -86,7 +91,6 @@ body {
   text-transform: lowercase;
 }
 .hero .badges {
-  position: absolute;
   width: calc(163px + 60px + 90px);
   display: flex;
   justify-content: space-between;
@@ -96,58 +100,69 @@ body {
 
 .mockup-ipad {
   position: absolute;
-  top: -530px;
-  right: -190px;
+  top: 200px;
+  right: -196px;
   width: 468px;
   height: 841px;
   background: transparent no-repeat padding-box;
   opacity: 1;
-
-
+  z-index: 2;
+}
+.mockup-ipad2 {
+  position: absolute;
+  top: 200px;
+  right: -196px;
+  width: 468px;
+  height: 841px;
+  background: transparent no-repeat padding-box;
+  opacity: 1;
+  z-index: 2;
+  display: none;
 }
 .description {
-  position: relative;
   height: 335px;
   background-color: #ffffff;
-  background-position:center;
+  background-position: center;
   background-size: contain;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 0;
-  
-}
-.app-description {
-  width: 1088px;
+  /* width: 100%; */
+  align-items: start; 
   display: flex;
   flex-direction: column;
   margin-top: 90px;
   padding: 0;
   height: 335px;
-  
 }
 .description h1 {
   text-align: left;
-  font: normal normal 600 35px/70px 'Open Sans', sans-serif;
+  font: normal normal 600 35px/70px "Open Sans", sans-serif;
   letter-spacing: 0px;
   color: #001125;
   text-transform: uppercase;
   opacity: 1;
   margin: 0;
 }
-.description hr {
-  height: 0px;
-  border: 1px solid #1cc6a0;
-  opacity: 1;
-}
+
 .description p {
   width: 727px;
   height: 134px;
   text-align: left;
-  font: normal normal 300 20px/30px 'Open Sans';
+  font: normal normal 300 20px/30px "Open Sans";
   letter-spacing: 0px;
   color: #001125;
   opacity: 1;
   padding: 5px;
+}
+
+@media screen and (max-width: 1087px) {
+  .container,
+  main {
+    width: 100%;
+  }
+
+}
+@media screen and (max-width: 1480px) {
+  .mockup-ipad {
+    right: 0;
+  }
+
 }
