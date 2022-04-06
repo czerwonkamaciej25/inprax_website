@@ -1,3 +1,6 @@
+* {
+  border: 1px solid red;
+}
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
@@ -16,18 +19,19 @@ main {
   display: flex;
   flex-direction: column;
   position: relative;
+  padding: 0;
 }
 
 .hero {
   position: relative;
   top: 0;
   left: 0;
-  height: 697px;
+  height: 100%;
   background-image: url(/images/Background-image.png);
   background-position: center;
-  background-color: #001225f8;
-  background-blend-mode: multiply;
-  opacity: 85%;
+  /* background-color: #001225f8;
+  background-blend-mode: multiply; */
+  /* opacity: 85%; */
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -38,21 +42,11 @@ main {
 
 .hero .page-logo {
   margin-top: 91px;
-  margin-left: -11px;
+  margin-left: 0px;
   margin-bottom: 122px;
 }
-.hero #logo {
-  margin-top: -50px;
-  margin-left: 90px;
-  text-align: left;
-  font: normal normal normal 22px/70px "Open Sans";
-  letter-spacing: 0px;
-  color: #f8f8f8;
-  text-transform: lowercase;
-  opacity: 0.8;
-}
 
-.hero h1 {
+.hero h2 {
   text-align: left;
   font: normal normal bold 35px/60px "Open Sans";
   letter-spacing: 0px;
@@ -63,7 +57,7 @@ main {
   padding: 5px;
   margin-bottom: 0;
 }
-.hero h1 #main-title1 {
+.hero h2 #main-title1 {
   color: white;
   line-height: 60px;
   text-transform: lowercase;
@@ -74,7 +68,7 @@ hr {
   border: 1px solid #1cc6a0;
   opacity: 1;
 }
-.hero h2 {
+.hero h3 {
   position: relative;
   bottom: 5px;
   text-align: left;
@@ -85,7 +79,7 @@ hr {
   padding: 5px;
   margin: 0;
 }
-.hero h2 #main-title2 {
+.hero h3 #main-title2 {
   color: #1cc6a0;
   line-height: 60px;
   text-transform: lowercase;
@@ -98,7 +92,7 @@ hr {
   padding: 5px;
 }
 
-.mockup-ipad {
+.mockup-ipad1 {
   position: absolute;
   top: 200px;
   right: -196px;
@@ -125,7 +119,7 @@ hr {
   background-position: center;
   background-size: contain;
   /* width: 100%; */
-  align-items: start; 
+  align-items: start;
   display: flex;
   flex-direction: column;
   margin-top: 90px;
@@ -158,11 +152,45 @@ hr {
   main {
     width: 100%;
   }
-
 }
 @media screen and (max-width: 1480px) {
   .mockup-ipad {
     right: 0;
   }
+}
 
+@media screen and (max-width: 428px) {
+  .hero {
+    background-image: url(/images/Background-image-smarthphone.png) ;
+    width: 100%;
+    height: 100%;
+  background-position: center
+  ;
+  }
+
+  .hero .page-logo img {
+    width: 60%;
+  }
+  .hero #logo {
+    font-size: 14px;
+  }
+
+  .hero h2 {
+    font-size: 18px;
+    width: 100%;
+  }
+  .hero h3 {
+    font-size: 16px;
+    width: 100%;
+  }
+  .mockup-ipad1 {
+    right: 0;
+    width: 87.35px;
+    height: 193.19px;
+  }
+
+  .description p {
+  font-size: 16px;
+  width: 100%;
+  }
 }
