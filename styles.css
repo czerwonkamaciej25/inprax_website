@@ -1,3 +1,6 @@
+/* * {
+  border: 1px solid red;
+} */
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
@@ -6,28 +9,21 @@ body {
   /* width: 100%; */
   align-items: center;
 }
-
-main {
-  width: 1088px;
-}
-
 .container {
   width: 1088px;
   display: flex;
   flex-direction: column;
   position: relative;
+  padding: 0;
 }
 
 .hero {
   position: relative;
   top: 0;
   left: 0;
-  height: 697px;
-  background-image: url(/images/Background-image.png);
+  height: 100%;
+  background-image: url(/images/bg-1920.png);
   background-position: center;
-  background-color: #001225f8;
-  background-blend-mode: multiply;
-  opacity: 85%;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -38,21 +34,13 @@ main {
 
 .hero .page-logo {
   margin-top: 91px;
-  margin-left: -11px;
+  margin-left: 0px;
   margin-bottom: 122px;
-}
-.hero #logo {
-  margin-top: -50px;
-  margin-left: 90px;
-  text-align: left;
-  font: normal normal normal 22px/70px "Open Sans";
-  letter-spacing: 0px;
-  color: #f8f8f8;
-  text-transform: lowercase;
-  opacity: 0.8;
 }
 
 .hero h1 {
+  position: relative;
+  top: -30px;
   text-align: left;
   font: normal normal bold 35px/60px "Open Sans";
   letter-spacing: 0px;
@@ -60,6 +48,7 @@ main {
   text-transform: uppercase;
   margin-top: -60px;
   width: 650px;
+  height: 180px;
   padding: 5px;
   margin-bottom: 0;
 }
@@ -76,7 +65,7 @@ hr {
 }
 .hero h2 {
   position: relative;
-  bottom: 5px;
+  bottom: 50px;
   text-align: left;
   font: normal normal normal 30px/70px Open Sans;
   letter-spacing: 0px;
@@ -91,16 +80,17 @@ hr {
   text-transform: lowercase;
 }
 .hero .badges {
+  position: relative;
   width: calc(163px + 60px + 90px);
   display: flex;
   justify-content: space-between;
-  bottom: 70px;
+  bottom: 30px;
   padding: 5px;
 }
 
-.mockup-ipad {
+.mockup-ipad-1920 {
   position: absolute;
-  top: 200px;
+  top: 130px;
   right: -196px;
   width: 468px;
   height: 841px;
@@ -108,29 +98,22 @@ hr {
   opacity: 1;
   z-index: 2;
 }
-.mockup-ipad2 {
-  position: absolute;
-  top: 200px;
-  right: -196px;
-  width: 468px;
-  height: 841px;
-  background: transparent no-repeat padding-box;
-  opacity: 1;
-  z-index: 2;
-  display: none;
+main {
+  width: 1088px;
 }
 .description {
+  position: relative;
   height: 335px;
   background-color: #ffffff;
   background-position: center;
   background-size: contain;
-  /* width: 100%; */
-  align-items: start; 
+  width: 100%;
+  align-items: start;
   display: flex;
   flex-direction: column;
-  margin-top: 90px;
+  top: 50px;
   padding: 0;
-  height: 335px;
+  margin: 0;
 }
 .description h1 {
   text-align: left;
@@ -150,19 +133,92 @@ hr {
   letter-spacing: 0px;
   color: #001125;
   opacity: 1;
-  padding: 5px;
+  padding: 0;
 }
 
-@media screen and (max-width: 1087px) {
+@media screen and (max-width: 1480px) {
+  .hero {
+    background-image: url(/images/bg-1480.png);
+    background-size: cover;
+  }
+  .hero h1 {
+    font-size: 30px;
+  }
+  .hero h2 {
+    font-size: 25px;
+  }
+  .mockup-ipad-1920 {
+    width: 350px;
+    height: 628px;
+    top: 200px;
+    right: -20px;
+  }
+  .description h1 {
+    font-size: 30px;
+  }
+  .description p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
   .container,
   main {
     width: 100%;
   }
-
+  .mockup-ipad-1920 {
+    width: 235px;
+    height: 519px;
+    top: 200px;
+    right: -20px;
+  }
+  .description {
+    width: 100%;
+  }
 }
-@media screen and (max-width: 1480px) {
-  .mockup-ipad {
-    right: 0;
+
+@media screen and (max-width: 428px) {
+  .hero {
+    background-image: url(/images/Background-image-smarthphone.png);
+    width: 100%;
+    height: 100%;
+    background-position: center;
   }
 
+  .hero .page-logo img {
+    width: 60%;
+  }
+  .hero #logo {
+    font-size: 14px;
+  }
+
+  .hero h1 {
+    font-size: 18px;
+    width: 100%;
+  }
+  .hero h2 {
+    font-size: 18px;
+    width: 100%;
+  }
+  .hero .badges {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero .badges img {
+    width: calc(28px + 0px + 70px);
+  }
+  .mockup-ipad-1920 {
+    width: 113.39px;
+    height: 203.47px;
+    top: 440px;
+    right: 60px;
+  }
+  .description h1 {
+    font-size: 20px;
+    width: 40%;
+  }
+  .description p {
+    font-size: 16px;
+    width: 100%;
+  }
 }
